@@ -7,7 +7,7 @@ job('practicaPDS1'){
 	      }
     }
     steps {
-        shell("/opt/juegoPuertas.sh")
+        shell("/opt/juegoPuertas.sha")
     }
     publishers{
         mailer("ramonlopezpracticas2@gmail.com", true, true)
