@@ -1,13 +1,13 @@
 job('practicaPDS1'){
     description('Tarea que nos dejo el profe')
     scm {
-        git('https://github.com/Ramonst18/pruebaPractica1.git', 'main') { node ->
+        git('https://github.com/Ramonst18/pruebaPractica1.git', '*/main') { node ->
       	    node / gitConfigName('Ramonst18')
       	    node / gitConfigEmail('Ramonst18@hotmail.com')
 	      }
     }
     steps {
-        shell("prueba.SH")
+        shell("/opt/juegoPuertas.sh")
     }
     publishers{
         mailer("ramonlopezpracticas2@gmail.com", true, true)
